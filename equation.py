@@ -35,10 +35,9 @@ class equation(object):
 
     def solve(self):
         self.solution=lina.solve(self.Abba, self.b)
+        self.limitvalue=-sum([self.d*K(q['ps'],0.,self.Ee, self.dimensions)*(1./(q['ps']**2 + self.Ee)+self.solution[q['in']]) for q in self.x])
         return self.solution
 
-    def lowlimit(self):
-        return self.solution[0]
 
 print 'Whoah, someone run the equation file!'
 
