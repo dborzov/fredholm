@@ -1,0 +1,126 @@
+\documentclass[8pt,letterpaper,notitlepage]{article}
+\usepackage[unicode=true]{hyperref}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[pdftex]{color,graphicx}
+\usepackage[top=1cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+\begin{document}
+
+\title{2D Bose gas}
+\maketitle
+Having in mind the renormalization argument reported in the previous paper, we are going to attempt to obtain the self-consistent equation for the qualitative behaviour of chemical potential for 2D Bose gas.
+
+In the manner similar to the 3D case, we start with introducing  $g_2$, which for 2D case is 
+\begin{equation}
+g_2(E| p) = - \frac{2 \pi}{\log \left( d \sqrt{ \frac{1}{4} p^2 - E} \right) } 
+\end{equation}
+Here $d$ is the interaction parameter that for quasi-2D systems is linked to the scattering length by
+\[
+d = C l_{\perp} \exp \left[ \sqrt{\frac{\pi}{2}} \frac{l_{\perp}}{a} \right]
+\]
+here $C$ is a numerical constant.
+
+
+Let us consider the back-of-the envelope estimation of the potential behaviour with only the 2-body term self-consistent equation
+\begin{equation}
+\mu = -\frac{4 \pi n_0}{\log (d^2 2 \mu)} + ...
+\end{equation}
+that can also be presented as
+\begin{equation}
+\log (d^2 2 \mu) = - \frac{4 \pi n_0}{\mu}
+\end{equation}
+\begin{equation}
+d^2 2 \mu = \exp \left( - \frac{4 \pi n_0}{\mu} \right)
+\end{equation}
+
+\begin{equation}
+\mu_1 = \frac{B_2}{2} \exp \left( - \frac{4 \pi n_0}{\mu} \right)
+\end{equation}
+We have a transendental equation, let us try to understand its behaviour.
+
+In the limit of high $B_2 \gg n_0$ and low gas concentration ($n_0$ has dimensions of $k^2$ in 2D), we have
+\[
+\mu = B_2 \left( 1 - \frac{4 \pi n_0}{\mu} \right)
+\]
+The solution for this second order polynomial  is ($\mu=0$ aside) 
+\[
+\mu = 4 \pi n_0 \left(1 + \frac{2}{B_2} 4 \pi n_0 \right)  + o\left( \frac{1}{B_2} \right), B_2 \rightarrow \infty
+\]
+\[
+\mu = \frac{B_2}{2} - 4 \pi n_0   + o\left( 1 \right), B_2 \rightarrow \infty
+\]
+Another way to consider this limit is
+\begin{equation}
+\frac{4 \pi n_0}{\mu} = 1 - \sum_{n \in N} \left( \frac{4 \pi n_0}{B_2} \right)^n
+\end{equation}
+
+We have discussed before the
+$g_3$ form for 2D case
+\[
+g_3 = \frac{16 \pi^2}{\log^2 ( d \sqrt{2 \mu} )}
+\int_0^{\Lambda} \frac{dk k}{\left\{ 2 \mu + k^2 \right\}} \frac{G_3(k)}
+{\log \left(\frac{3}{4} k^2 d^2  + 3 \mu d^2 \right)}
+\]
+
+
+with $G_3(p)$ being the solution of the following integral equation 
+\[
+G_3(p) = 4 \int^{\Lambda}_0 \frac{dk k}{\log \left( \frac{3}{4} k^2 d^2  + 3 \mu d^2 \right)}
+\left\{ \frac{1}{2 \mu + k^2} + G_3(k) \right\}
+\left\{ 
+(3 \mu + k^2 + p^2)^2 -  p^2 k^2
+\right\}^{-\frac{1}{2}}
+\]
+The self-consistent system of equations that sums up our approach is then
+\[
+\mu = n_0 g_2 (n_0, - \mu) + n_0^2 g_3 (n_0, - \mu)
+\]
+\[
+n = n (n_0, - \mu)
+\]
+Let us see what the numerical implementation yeilds us
+
+
+
+
+\section{Lowest-order terms}
+\[
+\mu = n_0 g_2 + 2 n_0^2 g_2^3 \int \frac{d^2 k}{(2 \pi)^2} \frac{1}{\left( k^2 + 2 \mu \right)^2}
+\]
+Introducing notations 
+\[
+y = \frac{\mu}{n_0 }, x = \frac{n_0}{B_2}
+\]
+\[
+z = \frac{\mu}{n } = y \frac{n_0}{n}, s = \frac{n}{B_2} = x \frac{n}{n_0}
+\]
+\[
+\frac{n}{n_0} = 1 + \frac{2 \pi}{y \log^2 (2xy)}
+\]
+
+we get
+\[
+y^2 \log^3 (2 x y) + 4 \pi y \log^2 (2 x y ) + (4 \pi)^2 =0
+\]
+\[
+z = \frac{y}{1 + \frac{2 \pi}{y \log^2 (2xy)}}
+\]
+\[
+s = x \left[ 1 + \frac{2 \pi}{y \log^2 (2xy)} \right]
+\]
+
+Dropping the last term gives us the following lowest-order expansion terms
+\[
+y = \frac{4 \pi}{\log \left[ \frac{1}{8 \pi x} \right]} 
+\left\{ 1 - \frac{\log \left[ \log \left( \frac{1}{8 \pi x} \right) \right]}{\log \left[ \frac{1}{8 \pi x} \right]} \right\}  + o(\textrm{ higher terms }), x \rightarrow 0
+\]
+or ,introducing $t = \frac{1}{\log \left[ \frac{1}{8 \pi x} \right]}$
+\[
+y = 4 \pi t \left\{ 1 + t \log t \right\} + o(t \log(t) ) , t  \rightarrow 0
+\]
+\[
+t = \frac{y}{4 \pi} \sum_{N=0, 1..} \left\{ \frac{y}{4 \pi} \log \left[ \frac{4 \pi}{y} \right] \right\}^N
+\]
+\end{document}

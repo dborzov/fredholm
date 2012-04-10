@@ -7,6 +7,15 @@ import trivia
 
 __author__ = 'Dima'
 
+
+def agile(variants_to_consider):
+    for parameter_set in variants_to_consider:
+        equation.solve(parameter_set['E'], parameter_set['L'], parameter_set['dx'])
+        equation.report_filename=''
+        equation.iteration=0
+        equation.dump_result()
+
+
 def print_a_report(file_name_id,variants_to_consider):
     """
     Prints a text report of the computational instance into a file.
@@ -16,7 +25,16 @@ def print_a_report(file_name_id,variants_to_consider):
     header=open(REPORT_FILE_FOLDER_NAME+'static/template.html',"r")
     report_file.writelines(header.readlines())
     for parameter_set in variants_to_consider:
-        report_file.write("<td bgcolor='"+parameter_set['color']+"'><center><font color='#ffffff'>"+parameter_set['name']+"</td><td>"+str(parameter_set['E'])+"</td><td>"+str(parameter_set['L'])+"</td><td>"+str(parameter_set['dx'])+"</td><td>"+str(round(parameter_set['L']/parameter_set['dx'],0))+"</td></tr>")
+        report_file.write("<td bgcolor='"+parameter_set['color']+
+                          "'><center><font color='#ffffff'>"+
+                          parameter_set['name']+
+                          "</td><td>"+
+                          str(parameter_set['E'])+
+                          "</td><td>"+
+                          str(parameter_set['L'])+
+                          "</td><td>"+str(parameter_set['dx'])+
+                          "</td><td>"+str(round(parameter_set['L']/parameter_set['dx'],0))+
+                          "</td></tr>")
     report_file.write("</tbody></table>")
 
     # starting up the non-homogenious term figure:
@@ -38,12 +56,8 @@ def print_a_report(file_name_id,variants_to_consider):
     pyplot.ylabel('G3(p)')
     y_scale=0.1
     for parameter_set in variants_to_consider:
-        time_benchmark= time.clock()
-        equation.solve(parameter_set['E'], parameter_set['L'], parameter_set['dx'])
+        equation.get_result(parameter_set)
         equation.report_filename=full_file_path
-        time_benchmark-= time.clock()
-        equation.computation_time=-round(time_benchmark,0)
-        equation.dump_result()
         y_scale=max([abs(x) for x in equation.solution]+[y_scale, equation.G3])
         pyplot.plot(equation.psi_range,equation.solution,'o',color=parameter_set['color'],markersize=3)
         pyplot.plot(equation.psi_range,equation.solution,'-',color=parameter_set['color'])

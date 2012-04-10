@@ -1,3 +1,4 @@
-import math
+import tasks
+from config import *
 
-print 'Ku-ku!!'
+tasks.agile([dict(PARAMETER_CHOICE[4].items()+[('E',10.65)])])

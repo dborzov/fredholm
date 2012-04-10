@@ -1,0 +1,87 @@
+\documentclass[8pt,letterpaper,notitlepage]{article}
+\usepackage[unicode=true]{hyperref}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[pdftex]{color,graphicx}
+\usepackage[top=1cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+\begin{document}
+
+\title{2D Bose gas}
+\maketitle
+Having in mind the renormalization argument reported in the previous paper, we are going to attempt to obtain the self-consistent equation for the qualitative behaviour of chemical potential for 2D Bose gas.
+
+In the manner similar to the 3D case, we start with introducing  $g_2$, which for 2D case is 
+\begin{equation}
+g_2(E| p) = - \frac{2 \pi}{\log \left( d \sqrt{ \frac{1}{4} p^2 - E} \right) } 
+\end{equation}
+Here $d$ is the interaction parameter that for quasi-2D systems is linked to the scattering length by
+\[
+d = C l_{\perp} \exp \left[ \sqrt{\frac{\pi}{2}} \frac{l_{\perp}}{a} \right]
+\]
+here $C$ is a numerical constant.
+
+
+Let us consider the back-of-the envelope estimation of the potential behaviour with only the 2-body term self-consistent equation
+\begin{equation}
+\mu = \frac{4 \pi n_0}{\log (d^2 2 \mu)} + ...
+\end{equation}
+that can also be presented as
+\begin{equation}
+\log (d^2 2 \mu) = \frac{4 \pi n_0}{\mu}
+\end{equation}
+One may notice that in a stark contrast to the 3D case there is no sign of instability in the crossover limit as there is a solution for any fixed finite $d$. It is a hint of a general feature that seems to be the case that unlike the 3D case, for 2D case the few-body terms 'cause' the instability of the high interaction limit.
+ 
+We have discussed before the
+$g_3$ form for 2D case
+\[
+g_3 = \frac{16 \pi^2}{\log^2 ( d \sqrt{2 \mu} )}
+\int_0^{\Lambda} \frac{dk k}{\left\{ 2 \mu + k^2 \right\}} \frac{G_3(k)}
+{\log \left(\frac{3}{4} k^2 d^2  + 3 \mu d^2 \right)}
+\]
+
+
+with $G_3(p)$ being the solution of the following integral equation 
+\[
+G_3(p) = - 4 \int^{\Lambda}_0 \frac{dk k}{\log \left( \frac{3}{4} k^2 d^2  + 3 \mu d^2 \right)}
+\left\{ \frac{1}{2 \mu + k^2} + G_3(k) \right\}
+\left\{ 
+(3 \mu + k^2 + p^2)^2 -  p^2 k^2
+\right\}^{-\frac{1}{2}}
+\]
+The self-consistent system of equations that sums up our approach is then
+\[
+\mu = n_0 g_2 (n_0, - \mu) + n_0^2 g_3 (n_0, - \mu)
+\]
+\[
+n = n (n_0, - \mu)
+\]
+Let us see what the numerical implementation yeilds us
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{../results/potential_energy_parameter.pdf}
+\includegraphics[width=0.7\columnwidth]{../results/potential_self-consistent.pdf}
+\caption{The $\mu(d)$ behaviour with $d$(lower plot) and $1/d^2$(upper plot) on the horizontal axis. The blue lines are the solution one gets with dropping the $g_3$ term. The filled dots represent the exact solution of the system with green dot region reproducing the 2-particle term solution with little discrepancy, the red dot region showing the qualitatively different behaviour (saturation) caused by the 3-particle term, and the blue region showing the breaking of the $g_3$ term and the zone of instability and the significant complex addition.}
+\label{diagram}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{../results/zero_limit_overview.pdf}
+\includegraphics[width=0.7\columnwidth]{../results/zero_limit_first_pole.pdf}
+\caption{The $G_3(0)$ as a function of $-E$ parameter, has two poles and is depicted here.}
+\label{diagram}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{../results/g3_overview.pdf}
+\includegraphics[width=0.7\columnwidth]{../results/g3_first_pole.pdf}
+\caption{The $g_3$ as a function of $-3 \mu$ parameter, has two poles and is depicted here.}
+\label{diagram}
+\end{center}
+\end{figure}
+\end{document}

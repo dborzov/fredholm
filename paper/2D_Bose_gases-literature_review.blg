@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: 2D_Bose_gases-literature_review.aux
+The style file: plain.bst
+Database file #1: tex/biblio.bib
+I was expecting a `,' or a `}'---line 4 of file tex/biblio.bib
+ :  
+ :  journal = {Nature},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 198 of file tex/biblio.bib
+ :   
+ :   journal = {Nature Physics},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+(There were 2 error messages)

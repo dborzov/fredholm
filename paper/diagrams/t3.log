@@ -1,0 +1,190 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9 64-bit) (preloaded format=latex 2011.7.11)  4 OCT 2011 13:18
+entering extended mode
+**t3.tex
+(C:\Users\Dima\Desktop\Dropbox\t3.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\Dima\Desktop\Dropbox\axodraw4j.sty
+Package: axodraw4j 2008/11/19
+
+Document option: axodraw4j. 19 Nov 2008
+***************************************************************************
+WARNING: use of axodraw4j is recommended only in conjunction with JaxoDraw!
+.....See http://jaxodraw.sourceforge.net/ for information on JaxoDraw......
+***************************************************************************
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\dvips\colordvi.sty")
+("C:\Program Files\MiKTeX 2.9\tex\generic\dvips\rotate.tex"
+\rotdimen=\dimen103
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\pstricks\pstricks.sty"
+Package: pstricks 2011/03/27 v0.49 LaTeX wrapper for `PSTricks' (RN,HV)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2010/01/28 v2.1 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pstricks.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\pst-xkey.tex"
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks15
+\XKV@tempa@toks=\toks16
+\XKV@depth=\count87
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex"
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count88
+\pstFP@xia=\count89
+\pstFP@xib=\count90
+\pstFP@xfa=\count91
+\pstFP@xfb=\count92
+\pstFP@rega=\count93
+\pstFP@regb=\count94
+\pstFP@regs=\count95
+\pstFP@times=\count96
+)
+\psLoopIndex=\count97
+
+`PSTricks' v2.19  <2011/03/25> (tvz)
+\pst@dima=\dimen104
+\pst@dimb=\dimen105
+\pst@dimc=\dimen106
+\pst@dimd=\dimen107
+\pst@dimg=\dimen108
+\pst@dimh=\dimen109
+\pst@dimm=\dimen110
+\pst@dimn=\dimen111
+\pst@dimo=\dimen112
+\pst@dimp=\dimen113
+\pst@hbox=\box26
+\pst@ibox=\box27
+\pst@boxg=\box28
+\pst@cnta=\count98
+\pst@cntb=\count99
+\pst@cntc=\count100
+\pst@cntd=\count101
+\pst@cntg=\count102
+\pst@cnth=\count103
+\pst@cntm=\count104
+\pst@cntn=\count105
+\pst@cnto=\count106
+\pst@cntp=\count107
+\@zero=\count108
+\pst@toks=\toks17
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pstricks.con")
+\psunit=\dimen114
+\psxunit=\dimen115
+\psyunit=\dimen116
+\pst@C@@rType=\count109
+\pslinewidth=\dimen117
+\psk@startLW=\dimen118
+\psk@endLW=\dimen119
+\pst@customdefs=\toks18
+\pslinearc=\dimen120
+\pst@symbolStep=\dimen121
+\pst@symbolWidth=\dimen122
+\everypsbox=\toks19
+\psframesep=\dimen123
+\pslabelsep=\dimen124
+\pst@shift=\dimen125
+\theoverlaybox=\box29
+)
+File: pstricks.tex 2011/03/25 v2.19 `PSTricks' (tvz,hv)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex")
+File: pst-fp.tex 2011/03/25 v2.19 `PST-fp' (hv)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(C:\Users\Dima\Desktop\Dropbox\t3.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 73.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 73.
+
+Overfull \hbox (163.49876pt too wide) in paragraph at lines 73--74
+ [][][] 
+ []
+
+[1
+
+] (C:\Users\Dima\Desktop\Dropbox\t3.aux) ) 
+Here is how much of TeX's memory you used:
+ 2658 strings out of 494054
+ 34422 string characters out of 3148629
+ 133501 words of memory out of 3000000
+ 5972 multiletter control sequences out of 15000+200000
+ 4553 words of font info for 17 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 32i,7n,38p,228b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on t3.dvi (1 page, 21524 bytes).

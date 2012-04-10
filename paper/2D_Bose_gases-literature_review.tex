@@ -1,0 +1,203 @@
+\documentclass[8pt,letterpaper,notitlepage]{article}
+\usepackage[unicode=true]{hyperref}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[pdftex]{color,graphicx}
+\usepackage[top=1cm, bottom=1.5cm, left=2cm, right=3cm]{geometry}
+\begin{document}
+
+\title{2D Bose gases: a review with batteries included}
+\author{Fei's group}
+\maketitle
+
+\section{Introduction}
+We review the literature and primary established results on 2D Bose gases. The paper consists of two parts. We discuss results on the abstract  2D Bose gases as a concept in the first part.  Its link to the experimental systems of quasi-2D gases of ultra cold alkali atoms is discussed in the second.  
+
+The distinquishing feature of the review is that an attempt was made to keep the narrative self-sufficient, so that a reader could follow the primary arguments without using cited sources.
+
+
+\tableofcontents
+
+\section{Number of particles}
+The symplest case is a non-interacting Bose gas, with the Hamiltonian of the system 
+\begin{equation}
+\hat{H} = \sum_{i} \varepsilon_i a^{\dagger}_{i} a_{i}
+\end{equation} 
+where $a$, $a^{\dagger}$ being creation and annihilation operators $[a, a^{\dagger}] = 1$ and
+$i$ is a general index of the states that Bose particles can occupy.
+
+ Another external condition is the conservation of number of particles. Speaking rigorously it should be satisfied by limiting the Hilbert space of states to the subset of ones with desired number of particles. The answer for the ground state $|GS \rangle$ is obvious in this case. 
+
+However, for subsequent purposes let us substitute the number conservation condition for the ground state with the following one
+\[
+\langle GS | \hat{N} | GS \rangle = N
+\]
+This is a more relaxed condition as the $| GS \rangle$ now can consitute of states with different number of particles and we have a condition only for the average. 
+It allows us to reformulate the problem by introducing the quantity of chemical potential as a
+Langrange optimization parameter (or Legendre conjugate)
+\[
+F = \textrm{min } \langle GS | \hat{H} - \mu \hat{N} | GS \rangle
+ \]
+\[
+N = -\frac{\partial G}{\partial \mu}
+\]
+We are going to start off the generalizations to more complex cases with this formulation. However, our relaxation of the particle number constraint is an important issue we need to track.
+One can improve upon it later on by, e.g., restricting second momenta
+\[
+\langle GS | \hat{N}^2 | GS \rangle = N^2
+\]
+\section{Short-ranged repulsion}
+Now let us throw some elastic interaction into it. One solve right way the attractive interaction case, lower energy rewards for all bosons condensing in one state don't change the ground state. How about some repulsive interaction?
+
+It turns out that one make suffiently general statements about . In the limit of low scattering energies in the free space (3+1), we have 
+
+Let us take some arbitrary potential, the one that is conveneint to play with. We can gauge the potential strength parameters to reproduce some fixed scattering length and maybe the second expansion parameter.
+
+If we have some hints at what the solution of such an artifical system looks like and we see that characteristic energy levels of particle interaction in the system are within the lower energy limit, chances are this is the case for the real system as well and we thus can make statements on their nature.
+
+  Another way to put it is that one may renormalize real interaction of the particles to the lower energy scales and in the lower
+ 
+The Hamiltonian in the momentum space
+\begin{equation}
+\hat{H} = \sum_{k} a_k^{\dagger} a_k + U_0 \sum_{k,p, Q} a^{\dagger}_{Q +k} a^{\dagger}_{- k} a_{Q+ p} a_{-p}
+\end{equation}
+
+\section{Path integral formulation}
+Let us consider the scalar quantum field theory \cite{Zee}, defined by the Langrangian density 
+\begin{equation}
+L = \partial_0 \Phi^{\dagger} \partial_0 \Phi - m^2 \Phi^{\dagger} \Phi - \lambda (\Phi^{\dagger} \Phi)^2
+\end{equation}
+In the limit of non-relativistic energies ($\Phi = e^{- i m t} \phi $) it becomes within the lowet order expansion with regard to the time derivative
+\begin{equation}
+L = i \phi^{\dagger} \partial_0 \phi + \frac{1}{2m} \partial_i^2 \phi^{\dagger} \phi - \frac{\lambda}{4 m} (\phi^{\dagger} \phi)^2
+\label{langrangian}
+\end{equation}
+Now let us use the standard secons quantization technique to see what the hamiltonian of such a system looks like
+\[
+-"P" = \frac{\delta L}{\delta (\partial_0 \phi)} = i \phi^{\dagger}, \text{  "P" for our new "momentum"}
+\]
+\[
+[\phi , "P"] = i \delta(x - x_0) \textrm{  our commutator }
+\]
+\[
+\textrm{ new Hamiltonian: } 
+\hat{H} = \sum_{k} \phi_k^{\dagger} \phi_k + U_0 \sum_{k,p, Q} \phi^{\dagger}_{Q +k} \phi^{\dagger}_{- k} \phi_{Q+ p} \phi_{-p}
+\]
+Now we see that we have the same system we discussed before, if we substitute notations $\phi \rightarrow a$, $\phi^{\dagger} \rightarrow a^{\dagger}$.
+
+How come did we get such a correspondence? The unique feature of the $\lambda \phi^4$ theory is that it is renormalizable in $3+1$ dimensional world and thus interaction of such a form is the only surviving term for effective theory applicable in the lower energy limit.  
+
+\section{Classical solution}
+Let us solve for the classical ground state solution of the system's Langrangian \ref{langrangian}. One may see that it corresponds to the minimization of the thermal potential 
+\begin{equation}
+F(\phi) = \int d^D\vec{x} \left[  \phi^{\dagger} \left( - \sum_x \frac{\partial_x^2}{2 m} \right)
+\phi - \left\{ \mu - V(\vec{x}) \right\} \phi^{\dagger} \phi + \frac{U_0}{2} ( \phi^{\dagger} \phi )^2
+\right]
+\end{equation}
+Variation of the potential with regard to $\phi$ yeilds the equation for minimum.
+
+One can see that for the repulsive case ($U_0 > 0$), this is equivalent to the Landau's second order transition potential or Landau-Gingsburg potential (with dropped gauge field coupling).
+
+Let us consider the homogenious case, or, more generally, region with slowly varying external potential (so that $V(\vec{x}) = 0$). The potential minimum is then
+\begin{equation}
+| \phi |^2= \frac{\mu}{U_0},\textrm{  } F(\phi) = - \Omega \frac{\mu^2}{U_0}  \textrm{ for $\mu>0$, $U_0> 0$ }
+\end{equation}
+\begin{equation}
+| \phi |^2= 0, \textrm{  } F(\phi) = 0 \textrm{ for $\mu \leq 0$, $U_0> 0$ }
+\end{equation}
+However, here the linear coefficient ($\mu$) has a different physical meaning. The chemical potential is matched by the particle concentration
+\begin{equation}
+N = - \frac{\partial F}{\partial \mu} = \frac{2 \Omega \mu}{U_0}
+\end{equation}
+\begin{equation}
+n = \frac{2 \mu}{U_0} \textrm{, or } \mu = \frac{1}{2} n U_0
+\end{equation}
+and more generally
+\begin{equation}
+\frac{1}{2m} \vec{\nabla}^2 \phi = \left\{ \mu (\vec{x}) - V(\vec{x}) \right\} \phi - U_0 ( \phi^{\dagger} \phi ) \phi
+\end{equation}
+this  equation yeilds the characteristic spatial length of the system $\xi$ (sometimes refered to as a coherence length)
+\begin{equation}
+\xi^2 = \frac{1}{2 m \mu}
+\end{equation}
+\section{Phonons}
+One may see that the classical solution for repulsively interacting Bose gas is characterized by the symmetry breaking. We have the Nambu-Goldstone theorem that promises us the gapless boson excitations, let us check them out by expanding the Langrangian around the classical ground-state
+\begin{equation}
+\phi = ( \rho_0 + \delta \rho ) e^{i \delta \theta} 
+\end{equation} 
+We gauged the "angle" $\theta$ parameter of the classical solution by $0$. 
+\section{Superfluidity}
+Let us discuss emergence of superfluidity. Landau's argument for the superfluidity condition consists of consideration of interaction .
+
+Let us consider the border. Will the interaction (friction effectively) result in passage of momentum? Let us assume that the elementary part of the gas of mass $M$ starts its movement at speed $\upsilon$ as the result of excitation. We have
+\begin{equation}
+M \upsilon = k
+\end{equation}
+\begin{equation}
+\frac{1}{2} M \upsilon^2 \geq N \varepsilon(k) 
+\end{equation}
+What are the conditions for low energy excitation spectrum for such friction event to occur in the limit of low $\upsilon$'s? 
+
+As noted by Feinman, what we do here effectively is that we consider the two densities of states - kinematic one ($\epsilon( k)  \propto k^2$) and the phase-defined one, in the case of phonons potential ($\epsilon( k)  \propto k$).
+
+One can see that the lack of the transmition states is the case for 3-dimensional space only for phonons and not the case for 2D and 1D systems. 
+
+It is worth noting that the superconductivity also makes perfect sense in such a language: we have a quasi-2D system for electron pairs and the limiting behaviour of the density of states is constant, so there has to be a gap for excitations in order for the electron pair's gas to have the property of superfluidity.
+\section{Finite size effects}
+Let us remake the quantization procedure of our Langrangian \ref{langrangian} in terms of $\rho$ and $\theta$. The Langrangian density now has the form
+\begin{equation}
+L = \frac{i}{2} \partial_0 \rho - \rho \partial_0 \theta - \frac{1}{2m}
+\left[ \rho (\partial_x \theta)^2 + \frac{1}{4 \rho} (\partial_x \rho)^2 \right] - \frac{U_0}{2} \rho^2
+\end{equation}
+Taking the symmetry-breaking parameter $\theta$ as a "coordinate" quantum variable, we have a new "momentum" 
+\begin{equation}
+"P_\theta" = - \frac{\delta L }{\delta \partial_0 \theta} = \rho
+\end{equation}
+and the commutation relation
+\[
+[ \rho (\vec{x}) , \theta (\vec{y})] = i \delta(\vec{x} - \vec{y})
+\]
+
+\section{Beliaev formalism}
+Now let us try to solve for the $| \theta \rangle$ state for which we have 
+\[
+a^{\pm}_0 | \theta \rangle = \sqrt{N_0} | \theta \rangle
+\]
+Thus for such  $| \theta \rangle$ solutions, the Hamiltonian can be simplified to
+\[
+\hat{H}
+\]
+This is sometimes refered to as the Bogolubov prescription. One may introduce the Green's function formalism for such a Hamiltonian
+\[
+G_{11}
+\]
+\[
+G_{02}
+\]
+Let us introduce notation for the Hatree-Fock's Green function $G_{HF}$ with
+\[
+\frac{1}{G_{HF}(E,  \vec{p} | n_0)} = E + \mu (n_0) - \frac{k^2}{2} - \Sigma_{11}(\mu,  n_0)
+\]
+Solving these relations yeilds us the explicit forms
+\[
+G_{11} = \frac{\frac{1}{G_{\textrm{HF}}}}{\frac{1}{G_{\textrm{HF}}^2} - \Sigma_{12}^2}
+\]
+\[
+G_{02} = \frac{\Sigma_{12}}{\frac{1}{G_{\textrm{HF}}^2} - \Sigma_{12}^2} 
+\]
+One notable property of these relations is
+\[
+G_{11} \pm G_{02} = \frac{1}{\frac{1}{G_{\textrm{HF}}} \mp \Sigma_{02}} = \frac{1}{E + \mu - \frac{p^2}{2} - \Sigma_{11}  \mp \Sigma_{02}}
+\]
+\section{Hugenhotz-Pines relation}
+Hugenhotz-Pines relation links $G_{11}$, $G_{12}$ with $\mu$ in the limit of states closed o the condensate, e.g. for the free space $E, \vec{p} \rightarrow 0$. We have
+\[
+\mu = \textrm{lim }_{E, \vec{p} \rightarrow 0} \left[ \Sigma_{11} (E , \vec{p}) - \Sigma_{02} (E , \vec{p}) \right]
+\]
+\bibliographystyle{plain}
+\bibliography{tex/biblio}
+
+
+\end{document}
