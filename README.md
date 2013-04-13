@@ -1,5 +1,5 @@
 ===========
-Fredholm
+Fredholm.py
 ===========
 
 Fredholm python package allows you to solve integral equations numerically. 
