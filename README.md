@@ -2,12 +2,16 @@
 Fredholm
 ===========
 
-Fredholm python package allows you to solve integral equations numerically. Fredholm's integral equation of the first order can be written in the following way::
+Fredholm python package allows you to solve integral equations numerically. 
 
+See [dborzov.github.io/fredholm](http://dborzov.github.io/fredholm/) for more details.
+
+Fredholm's integral equation of the first order can be written in the following way::
+```
     int K(y,x) phi(x) dx = f(y)
-
+```
 To use it, define the Fredholm's integral kernel of the equation and the nonhomogenious term::
-
+```
     #!/usr/bin/env python
 
     import Fredholm
@@ -16,7 +20,7 @@ To use it, define the Fredholm's integral kernel of the equation and the nonhomo
     Fredholm.range.low, Fredholm.range.high = 0. , 100.
     Fredholm.solve()
     print Fredholm.solution(2.) 
-
+```
 
 Fredholm.solution yeilds the NumPy interpolation function that is defined in the defined range.
 
@@ -27,11 +31,3 @@ Here are some reasons to know and love Fredholm:
 1. The adaptive integration mesh
 
 2. Can take care of principal value integrals
-
-
-How it works
-=========
-
-The range is split the integral into approximation scheme and solves the resultant linear algebra scheme 
-
-However the main advanatage is that the mesh  structure is adaptable.
