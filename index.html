@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Fredholm by dborzov</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/dborzov/fredholm">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Fredholm</h1>
+            <h2>Solves integral equations with singular divergences numerically</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/dborzov/fredholm/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/dborzov/fredholm/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h3>Solving Fredholm equations numerically.</h3>
+
+<p><a href="http://en.wikipedia.org/wiki/Fredholm_integral_equation">Inhomogeneous Fredholm equations</a> of the first order (inhomogenious) can be written as follows:</p>
+
+<p>Here functions K (called Kernel) and g (inhomogeneous term) are given and f(s) is the function to solve for.</p>
+
+<p>In this form, such equation is often encountered in the quantum many-body physics. Depending on the context and details, they are referred to as either integral equations for quantum scattering problem, Dyson's equation or Bethe-Soppiter but have similar underlying feature.</p>
+
+<p>For such applications, some common features arise:</p>
+
+<ol>
+<li><p>The delta function term could be singled out.</p></li>
+<li><p>If real and complex parts are separated, function diverges under the integral, principal value integral. There are resonances/bound state amplitute contributions.</p></li>
+</ol><h3>Usage.</h3>
+
+<p>Let's get down to bussiness, to defeat the Huns! First you need to make sure you have Python 2.7+ with the numpy packages properly installed at your system of choice. To see if that is the case try:</p>
+
+<pre><code>python import numpy 
+</code></pre>
+
+<p>If there is no exception, it probably works.</p>
+
+<p>Now we can download the package:</p>
+
+<pre><code>git checkout
+</code></pre>
+
+<p>And run tests to see if everything works:</p>
+
+<pre><code>python test.py
+</code></pre>
+
+<h3>Authors and Contributors</h3>
+
+<p>This numerical library was developed by <a href="http://dimaborzov.com">Dima Borzov</a> and used to produce my contributions to the following peer reviewed publications:</p>
+
+<ol>
+<li>Mashayekhi et al., "Two-dimensional Bose gases near resonance: universal three-body effects", <a href="http://prl.aps.org/abstract/PRL/v110/i14/e145301">Phys. Rev. Lett. 110, 145301 (2013)</a>
+</li>
+<li>Borzov et al., "Nature of 3D Bose Gases near Resonance", <a href="http://pra.aps.org/abstract/PRA/v85/i2/e023620">Phys. Rev. A 85, 023620 (2012)</a>
+</li>
+</ol><p>It is licensed MIT-licensed.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/dborzov">dborzov</a> can be found on <a href="https://github.com/dborzov/fredholm">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
