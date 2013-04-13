@@ -17,7 +17,8 @@
         $('#main_content').headsmart()
       })
     </script>
-    <title>Fredholm by dborzov</title>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+    <title>Fredholm.py, a nice python library to solve integral equations</title>
   </head>
 
   <body>
@@ -48,9 +49,15 @@
       <section id="main_content">
         <h3>Solving Fredholm equations numerically.</h3>
 
-<p><a href="http://en.wikipedia.org/wiki/Fredholm_integral_equation">Inhomogeneous Fredholm equations</a> of the first order (inhomogenious) can be written as follows:</p>
-
-<p>Here functions K (called Kernel) and g (inhomogeneous term) are given and f(s) is the function to solve for.</p>
+<p><a href="http://en.wikipedia.org/wiki/Fredholm_integral_equation">Fredholm equations</a> of the first kind (inhomogenious) can be written as follows:</p>
+<pre><code>
+<center>
+  <div lang="latex">  
+g(y) = \int_a^{b} K(y,x) f(y) dx
+</div>
+</center>
+</pre></code>
+<p>Here functions <span lang="latex">K(y,x)</span> (called Kernel) and <span lang="latex">g(y)</span> (inhomogeneous term) are given and <span lang="latex">f(s)</span> is the function to solve for.</p>
 
 <p>In this form, such equation is often encountered in the quantum many-body physics. Depending on the context and details, they are referred to as either integral equations for quantum scattering problem, Dyson's equation or Bethe-Soppiter but have similar underlying feature.</p>
 
@@ -59,24 +66,58 @@
 <ol>
 <li><p>The delta function term could be singled out.</p></li>
 <li><p>If real and complex parts are separated, function diverges under the integral, principal value integral. There are resonances/bound state amplitute contributions.</p></li>
+
+Taking this into account, we now get the following equation form:
+<pre><code>
+<center>
+  <div lang="latex">  
+g(y) = f(y) + \textrm{P.v.} \int_a^{b} K(y,x) f(y) dx 
+</div>
+</center>
+</pre></code>
+
+The Fredholm library is developed with such purposes in mind.
 </ol><h3>Usage.</h3>
 
-<p>Let's get down to bussiness, to defeat the Huns! First you need to make sure you have Python 2.7+ with the numpy packages properly installed at your system of choice. To see if that is the case try:</p>
+<p>My intention is to make it a package , however, there is a lot do be done first. So, chances are, working with the library can more challanging to date than I wish. Some basic knowledge of the python ecosystem is still a must unfortunately.</p>
+
+<p>So ,if you are still not discouraged, let's get down to bussiness (to defeat the Huns!). First you need to make sure you have Python 2.7+ with the numpy packages properly installed at your system of choice. To see if that is the case try:</p>
 
 <pre><code>python import numpy 
 </code></pre>
 
-<p>If there is no exception, it probably works.</p>
+<p>If there is no exception, the numpy probably works.</p>
 
-<p>Now we can download the package:</p>
+<p>Now we can download the package and tun tests:</p>
 
-<pre><code>git checkout
+<pre><code>python ./fredholm/tests/test_main.py 
+</code></pre>
+If tests worked properly, we can now proceed to our first example case.
+Let us consider the following equation:
+<pre><code>
+<center>
+  <div lang="latex">  
+y = f(y) + \textrm{P.v.} \int_0^{100} \frac{f(x) dx}{x^2 + y^2} 
+</div>
+</center>
+</pre></code>
+We import the package library and set up the given functions, and run the .solve() method.
+<pre><code> 
+  #!/usr/bin/env python
+  import Fredholm
+  Fredholm.Kernel = lambda x,y: 1/(x**2 + y**2)
+  Fredholm.f = lambda x: 1.
+  Fredholm.range.low, Fredholm.range.high = 0. , 100.
+  Fredholm.solve()
+</code></pre>
+Horray! We got first soution. We can plot it or look up specific values:
+<pre><code> 
+    Fredholm.solution(3.)
+    Fredholm.plot()
 </code></pre>
 
-<p>And run tests to see if everything works:</p>
+That should get you starting.
 
-<pre><code>python test.py
-</code></pre>
 
 <h3>Authors and Contributors</h3>
 
