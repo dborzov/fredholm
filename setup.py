@@ -10,7 +10,7 @@ setup(
     url='http://pypi.python.org/pypi/TowelStuff/',
     license='LICENSE.txt',
     description='Solves integral equation.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.MD').read(),
     install_requires=[
         "NumPy >= 1.1.1",
         "SciPy >= 0.1.4",
